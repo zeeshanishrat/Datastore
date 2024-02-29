@@ -1,0 +1,17 @@
+{
+	"name": "SAPBW",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=SAPHANA;initial catalog=ILNDB",
+			"userName": "azuser",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJhYWZiNDQ5Zi1jYzZmLTQ1OTktOTBhMS02OGM5NjdmYTlmZTkiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SAPBWIntigrationRunTime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
