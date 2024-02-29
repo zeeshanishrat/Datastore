@@ -1,6 +1,9 @@
 {
 	"name": "SAPBWIntigrationRunTime",
 	"properties": {
-		"type": "SelfHosted"
+		"type": "SelfHosted",
+		"typeProperties": {
+			"selfContainedInteractiveAuthoringEnabled": false
+		}
 	}
 }
