@@ -1,0 +1,7 @@
+{
+	"name": "On-PremSelfHostedintegrationRuntime1",
+	"properties": {
+		"type": "SelfHosted",
+		"description": "On prem Self Hosted Server for SAP HANA intigration"
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"name": "SapBwViaMDXLinkedService",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "SAP BW Via MDX Linked Service",
+		"annotations": [],
+		"type": "SapBw",
+		"typeProperties": {
+			"server": "SAPHANA",
+			"systemNumber": "123456",
+			"clientId": "1234",
+			"userName": "azuser",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIzNDgxYmU1My05ZTFkLTQ1MmMtOGQzYi0zYzMzZDI3ZjkzNmEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "On-PremSelfHostedintegrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

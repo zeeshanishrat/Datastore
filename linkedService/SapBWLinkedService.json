@@ -1,0 +1,21 @@
+{
+	"name": "SapBWLinkedService",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"description": "SAP BW linked Service",
+		"annotations": [],
+		"type": "SapOpenHub",
+		"typeProperties": {
+			"clientId": "1234",
+			"language": "English",
+			"userName": "azuser",
+			"server": "SAPHANA",
+			"systemNumber": "123456",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJmNzI1NjExNS03N2NlLTRmZWMtYmRlOC1iYWUxMmM2YWUzYmMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "On-PremSelfHostedintegrationRuntime1",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
