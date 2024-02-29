@@ -1,0 +1,6 @@
+{
+	"name": "SAPBWIntigrationRunTime",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
