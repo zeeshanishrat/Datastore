@@ -6,6 +6,19 @@
 			"type": "string",
 			"metadata": "Data Factory name",
 			"defaultValue": "df-aeu-ett-dev-mktng4"
+		},
+		"SAPBW_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SAPBW'",
+			"defaultValue": "Integrated Security=True;Data Source=SAPHANA;Initial Catalog=ILNDB"
+		},
+		"SAPBW_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SAPBW'"
+		},
+		"SAPBW_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "azuser"
 		}
 	},
 	"variables": {
@@ -23,6 +36,131 @@
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/pipeline1')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "Copy data1",
+						"type": "Copy",
+						"dependsOn": [],
+						"policy": {
+							"timeout": "0.12:00:00",
+							"retry": 0,
+							"retryIntervalInSeconds": 30,
+							"secureOutput": false,
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"enableStaging": false
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"annotations": []
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SAPBW')]",
+			"type": "Microsoft.DataFactory/factories/linkedServices",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"annotations": [],
+				"type": "SqlServer",
+				"typeProperties": {
+					"connectionString": "[parameters('SAPBW_connectionString')]",
+					"userName": "[parameters('SAPBW_properties_typeProperties_userName')]",
+					"password": {
+						"type": "SecureString",
+						"value": "[parameters('SAPBW_password')]"
+					}
+				},
+				"connectVia": {
+					"referenceName": "SAPBWIntigrationRunTime",
+					"type": "IntegrationRuntimeReference"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/integrationRuntimes/SAPBWIntigrationRunTime')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/SqlServerTable1')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "SAPBW",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "SqlServerTable",
+				"schema": [
+					{
+						"name": "EQUIPO_ID",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "NOMBRE_EQUIPO",
+						"type": "varchar"
+					},
+					{
+						"name": "MARCA",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "SERIE",
+						"type": "varchar"
+					},
+					{
+						"name": "LINEA",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "LUBRICACION",
+						"type": "bit"
+					},
+					{
+						"name": "INGRESADOPOR",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "MODIFICADOPOR",
+						"type": "int",
+						"precision": 10
+					},
+					{
+						"name": "FECHAINGRESO",
+						"type": "smalldatetime",
+						"precision": 16,
+						"scale": 0
+					},
+					{
+						"name": "FECHAMODIFICACION",
+						"type": "smalldatetime",
+						"precision": 16,
+						"scale": 0
+					}
+				],
+				"typeProperties": {
+					"schema": "dbo",
+					"table": "TBL_EQUIPOS"
+				}
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/SAPBW')]"
+			]
 		}
 	]
 }

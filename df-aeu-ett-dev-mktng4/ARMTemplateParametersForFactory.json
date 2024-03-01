@@ -4,6 +4,15 @@
 	"parameters": {
 		"factoryName": {
 			"value": "df-aeu-ett-dev-mktng4"
+		},
+		"SAPBW_connectionString": {
+			"value": "Integrated Security=True;Data Source=SAPHANA;Initial Catalog=ILNDB"
+		},
+		"SAPBW_password": {
+			"value": ""
+		},
+		"SAPBW_properties_typeProperties_userName": {
+			"value": "azuser"
 		}
 	}
 }

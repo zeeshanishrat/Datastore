@@ -7,6 +7,19 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "df-aeu-ett-dev-mktng4"
 		},
+		"SAPBW_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'SAPBW'",
+			"defaultValue": "Integrated Security=True;Data Source=SAPHANA;Initial Catalog=ILNDB"
+		},
+		"SAPBW_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'SAPBW'"
+		},
+		"SAPBW_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "azuser"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -33,6 +46,15 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"SAPBW_connectionString": {
+						"value": "[parameters('SAPBW_connectionString')]"
+					},
+					"SAPBW_password": {
+						"value": "[parameters('SAPBW_password')]"
+					},
+					"SAPBW_properties_typeProperties_userName": {
+						"value": "[parameters('SAPBW_properties_typeProperties_userName')]"
 					}
 				}
 			},
