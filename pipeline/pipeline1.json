@@ -13,7 +13,16 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "dbo.TBL_EQUIPOS"
+					},
+					{
+						"name": "Destination",
+						"value": "dbo.TBL_EQUIPOS"
+					}
+				],
 				"typeProperties": {
 					"source": {
 						"type": "SqlServerSource",
