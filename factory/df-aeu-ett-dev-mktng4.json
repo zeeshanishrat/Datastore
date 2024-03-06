@@ -1,0 +1,9 @@
+{
+	"name": "df-aeu-ett-dev-mktng4",
+	"properties": {
+		"globalConfigurations": {
+			"PipelineBillingEnabled": "true"
+		}
+	},
+	"location": "eastus"
+}
