@@ -1,0 +1,37 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "SqlServerTable1",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"scriptLines": [
+				"source(output(",
+				"          EQUIPO_ID as integer,",
+				"          NOMBRE_EQUIPO as string,",
+				"          MARCA as integer,",
+				"          SERIE as string,",
+				"          LINEA as integer,",
+				"          LUBRICACION as boolean,",
+				"          INGRESADOPOR as integer,",
+				"          MODIFICADOPOR as integer,",
+				"          FECHAINGRESO as timestamp,",
+				"          FECHAMODIFICACION as timestamp",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     isolationLevel: 'READ_UNCOMMITTED',",
+				"     format: 'table') ~> source1"
+			]
+		}
+	}
+}
