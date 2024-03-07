@@ -3,7 +3,16 @@
 	"properties": {
 		"type": "WranglingDataFlow",
 		"typeProperties": {
-			"sources": []
+			"sources": [
+				{
+					"name": "DestinationDataset_viw",
+					"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tignoreNoFilesFound: false) ~>  DestinationDataset_viw",
+					"dataset": {
+						"referenceName": "DestinationDataset_viw",
+						"type": "DatasetReference"
+					}
+				}
+			]
 		}
 	}
 }
