@@ -40,7 +40,7 @@
 				"     validateSchema: true,",
 				"     limit: 100,",
 				"     ignoreNoFilesFound: false,",
-				"     entity: '',",
+				"     entity: '/state /terraform/datalake',",
 				"     format: 'cdm',",
 				"     manifestType: 'manifest',",
 				"     manifestName: 'data_factory_dev',",
