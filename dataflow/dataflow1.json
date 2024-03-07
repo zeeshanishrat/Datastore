@@ -45,7 +45,7 @@
 				"     fileSystem: 'state') ~> source1",
 				"source1 sink(allowSchemaDrift: true,",
 				"     validateSchema: true,",
-				"     entity: '',",
+				"     entity: '/state /terraform/datalake',",
 				"     format: 'cdm',",
 				"     manifestType: 'manifest',",
 				"     entityPath: 'terraform/datalake',",
