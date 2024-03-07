@@ -38,7 +38,6 @@
 				"source(useSchema: false,",
 				"     allowSchemaDrift: false,",
 				"     validateSchema: true,",
-				"     limit: 100,",
 				"     ignoreNoFilesFound: false,",
 				"     entity: '/state /terraform/datalake',",
 				"     format: 'cdm',",
