@@ -86,7 +86,13 @@
 							"inputs": [
 								{
 									"referenceName": "DestinationDataset_viw",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"cw_fileName": {
+											"value": "@item()",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
