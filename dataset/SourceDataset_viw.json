@@ -5,20 +5,62 @@
 			"referenceName": "SAPBW",
 			"type": "LinkedServiceReference"
 		},
-		"parameters": {
-			"cw_table": {
-				"type": "String"
-			}
-		},
 		"annotations": [],
 		"type": "SqlServerTable",
-		"schema": [],
+		"schema": [
+			{
+				"name": "EQUIPO_ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "NOMBRE_EQUIPO",
+				"type": "varchar"
+			},
+			{
+				"name": "MARCA",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SERIE",
+				"type": "varchar"
+			},
+			{
+				"name": "LINEA",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "LUBRICACION",
+				"type": "bit"
+			},
+			{
+				"name": "INGRESADOPOR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "MODIFICADOPOR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "FECHAINGRESO",
+				"type": "smalldatetime",
+				"precision": 16,
+				"scale": 0
+			},
+			{
+				"name": "FECHAMODIFICACION",
+				"type": "smalldatetime",
+				"precision": 16,
+				"scale": 0
+			}
+		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": {
-				"value": "@dataset().cw_table",
-				"type": "Expression"
-			}
+			"table": "TBL_EQUIPOS"
 		}
 	}
 }
