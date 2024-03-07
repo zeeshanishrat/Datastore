@@ -24,6 +24,11 @@
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": []
+		"schema": [
+			{
+				"name": "{",
+				"type": "String"
+			}
+		]
 	}
 }
