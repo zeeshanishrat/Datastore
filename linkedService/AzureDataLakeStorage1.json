@@ -6,11 +6,7 @@
 		"type": "AzureBlobFS",
 		"typeProperties": {
 			"url": "https://saaeuettdevmmarketing4.dfs.core.windows.net/",
-			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI1NjNmMWE3MC1iMjRhLTQxMTMtOGE2YS00MDgwMjRiZTY4ZjciLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
-		},
-		"connectVia": {
-			"referenceName": "SAPBWIntigrationRunTime",
-			"type": "IntegrationRuntimeReference"
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDk3NzNFQjc0LUY2MzMtNEVCQi1BMjgwLUU0OTIxQkJEMkNBMV8yNjBjZmZkZi03YWRlLTQzNmMtOWIyZC04NzQ4YzVlMTVmMTgiDQp9"
 		}
 	}
 }
