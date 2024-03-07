@@ -1,0 +1,12 @@
+{
+	"name": "AzureSynapseArtifacts1",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSynapseArtifacts",
+		"typeProperties": {
+			"endpoint": "https://syn-aeu-ett-dev-mktng4.dev.azuresynapse.net",
+			"authentication": "MSI",
+			"workspaceResourceId": "/subscriptions/dfd20297-fe08-4392-ba07-a011f4b1acd7/resourceGroups/rg-aeu-ett-dev-mktng4/providers/Microsoft.Synapse/workspaces/syn-aeu-ett-dev-mktng4"
+		}
+	}
+}
