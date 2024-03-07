@@ -5,15 +5,27 @@
 		"typeProperties": {
 			"sources": [
 				{
+					"linkedService": {
+						"referenceName": "AzureDataLakeStorage1",
+						"type": "LinkedServiceReference"
+					},
 					"name": "source1"
 				}
 			],
 			"sinks": [],
 			"transformations": [],
 			"scriptLines": [
-				"source(allowSchemaDrift: true,",
+				"source(useSchema: false,",
+				"     allowSchemaDrift: false,",
 				"     validateSchema: false,",
-				"     limit: 100) ~> source1"
+				"     limit: 100,",
+				"     ignoreNoFilesFound: false,",
+				"     entity: '',",
+				"     format: 'cdm',",
+				"     manifestType: 'manifest',",
+				"     local: true,",
+				"     folderPath: '',",
+				"     fileSystem: '') ~> source1"
 			]
 		}
 	}
