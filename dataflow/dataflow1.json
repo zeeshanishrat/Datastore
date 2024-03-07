@@ -5,6 +5,14 @@
 		"typeProperties": {
 			"sources": [
 				{
+					"linkedService": {
+						"referenceName": "AzureDataLakeStorage1",
+						"type": "LinkedServiceReference"
+					},
+					"schemaLinkedService": {
+						"referenceName": "AzureDataLakeStorage1",
+						"type": "LinkedServiceReference"
+					},
 					"name": "source1"
 				}
 			],
@@ -27,10 +35,21 @@
 			],
 			"transformations": [],
 			"scriptLines": [
-				"source(allowSchemaDrift: false,",
+				"source(useSchema: false,",
+				"     allowSchemaDrift: false,",
 				"     validateSchema: true,",
 				"     limit: 100,",
-				"     manifestType: 'manifest') ~> source1",
+				"     ignoreNoFilesFound: false,",
+				"     entity: '/state /terraform/datalake',",
+				"     format: 'cdm',",
+				"     manifestType: 'manifest',",
+				"     manifestName: 'data_factory_dev',",
+				"     entityPath: 'terraform/datalake',",
+				"     corpusPath: 'terraform',",
+				"     corpusStore: 'adlsgen2',",
+				"     adlsgen2_fileSystem: 'state',",
+				"     folderPath: '',",
+				"     fileSystem: 'state') ~> source1",
 				"source1 sink(allowSchemaDrift: true,",
 				"     validateSchema: true,",
 				"     entity: '',",
