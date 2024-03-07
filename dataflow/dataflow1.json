@@ -47,7 +47,7 @@
 				"     entityPath: 'terraform/datalake',",
 				"     corpusPath: '',",
 				"     corpusStore: 'adlsgen2',",
-				"     adlsgen2_fileSystem: 'state',",
+				"     adlsgen2_fileSystem: 'corpus-folder',",
 				"     folderPath: '',",
 				"     fileSystem: 'state') ~> source1",
 				"source1 sink(allowSchemaDrift: false,",
