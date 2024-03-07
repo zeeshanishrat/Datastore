@@ -16,12 +16,16 @@
 					"name": "source1"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"name": "sink1"
+				}
+			],
 			"transformations": [],
 			"scriptLines": [
 				"source(useSchema: false,",
 				"     allowSchemaDrift: false,",
-				"     validateSchema: false,",
+				"     validateSchema: true,",
 				"     limit: 100,",
 				"     ignoreNoFilesFound: false,",
 				"     entity: '',",
@@ -31,9 +35,13 @@
 				"     entityPath: 'terraform/datalake',",
 				"     corpusPath: '',",
 				"     corpusStore: 'adlsgen2',",
-				"     adlsgen2_fileSystem: '',",
+				"     adlsgen2_fileSystem: 'state',",
 				"     folderPath: '',",
-				"     fileSystem: 'state') ~> source1"
+				"     fileSystem: 'state') ~> source1",
+				"source1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
 			]
 		}
 	}
