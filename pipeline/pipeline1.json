@@ -39,6 +39,128 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "EQUIPO_ID",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "EQUIPO_ID",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "NOMBRE_EQUIPO",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "NOMBRE_EQUIPO",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "MARCA",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "MARCA",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "SERIE",
+									"type": "String",
+									"physicalType": "varchar"
+								},
+								"sink": {
+									"name": "SERIE",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "LINEA",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "LINEA",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "LUBRICACION",
+									"type": "Boolean",
+									"physicalType": "bit"
+								},
+								"sink": {
+									"name": "LUBRICACION",
+									"type": "Boolean",
+									"physicalType": "bit"
+								}
+							},
+							{
+								"source": {
+									"name": "INGRESADOPOR",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "INGRESADOPOR",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "MODIFICADOPOR",
+									"type": "Int32",
+									"physicalType": "int"
+								},
+								"sink": {
+									"name": "MODIFICADOPOR",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "FECHAINGRESO",
+									"type": "DateTime",
+									"physicalType": "smalldatetime"
+								},
+								"sink": {
+									"name": "FECHAINGRESO",
+									"type": "DateTime",
+									"physicalType": "smalldatetime"
+								}
+							},
+							{
+								"source": {
+									"name": "FECHAMODIFICACION",
+									"type": "DateTime",
+									"physicalType": "smalldatetime"
+								},
+								"sink": {
+									"name": "FECHAMODIFICACION",
+									"type": "DateTime",
+									"physicalType": "smalldatetime"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
