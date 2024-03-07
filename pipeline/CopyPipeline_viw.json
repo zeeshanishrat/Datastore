@@ -3,8 +3,8 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Synapse",
-				"type": "SynapseNotebook",
+				"name": "Jar1",
+				"type": "DatabricksSparkJar",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -13,14 +13,7 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
-				"typeProperties": {
-					"snapshot": true
-				},
-				"linkedServiceName": {
-					"referenceName": "AzureSynapseArtifacts1",
-					"type": "LinkedServiceReference"
-				}
+				"userProperties": []
 			}
 		],
 		"parameters": {
