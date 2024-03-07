@@ -19,6 +19,10 @@
 					"value": "@dataset().cw_fileName",
 					"type": "Expression"
 				},
+				"folderPath": {
+					"value": "@dataset().cw_fileName",
+					"type": "Expression"
+				},
 				"fileSystem": "state"
 			},
 			"columnDelimiter": ",",
