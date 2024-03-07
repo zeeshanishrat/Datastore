@@ -1,0 +1,28 @@
+{
+	"name": "AzureDatabricks1",
+	"properties": {
+		"parameters": {
+			"databrick": {
+				"type": "String",
+				"defaultValue": "1"
+			}
+		},
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://adb-3905031576788493.13.azuredatabricks.net",
+			"authentication": "MSI",
+			"workspaceResourceId": "/subscriptions/dfd20297-fe08-4392-ba07-a011f4b1acd7/resourceGroups/RG-AEU-ETT-DEV-MARKETING4/providers/Microsoft.Databricks/workspaces/datafctoryformarketing4",
+			"newClusterNodeType": "@linkedService().databrick",
+			"newClusterNumOfWorker": "1",
+			"newClusterVersion": "@linkedService().databrick",
+			"clusterOption": "Fixed",
+			"newClusterInitScripts": [],
+			"dataSecurityMode": "SINGLE_USER"
+		},
+		"connectVia": {
+			"referenceName": "SAPBWIntigrationRunTime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
