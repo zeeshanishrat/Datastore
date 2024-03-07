@@ -5,14 +5,26 @@
 		"factoryName": {
 			"value": "df-aeu-ett-dev-mktng4"
 		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
 		"SAPBW_connectionString": {
 			"value": "Integrated Security=True;Data Source=SAPHANA;Initial Catalog=ILNDB"
 		},
 		"SAPBW_password": {
 			"value": ""
 		},
+		"linkedService2_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://saaeuettdevmmarketing4.dfs.core.windows.net/"
+		},
 		"SAPBW_properties_typeProperties_userName": {
 			"value": "azuser"
+		},
+		"linkedService2_properties_typeProperties_url": {
+			"value": "https://saaeuettdevmmarketing4.dfs.core.windows.net/"
 		}
 	}
 }
