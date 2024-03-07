@@ -18,6 +18,14 @@
 			],
 			"sinks": [
 				{
+					"linkedService": {
+						"referenceName": "AzureDataLakeStorage1",
+						"type": "LinkedServiceReference"
+					},
+					"schemaLinkedService": {
+						"referenceName": "AzureDataLakeStorage1",
+						"type": "LinkedServiceReference"
+					},
 					"name": "sink1"
 				}
 			],
@@ -38,8 +46,26 @@
 				"     adlsgen2_fileSystem: 'state',",
 				"     folderPath: '',",
 				"     fileSystem: 'state') ~> source1",
-				"source1 sink(allowSchemaDrift: true,",
+				"source1 sink(allowSchemaDrift: false,",
 				"     validateSchema: false,",
+				"     entity: '',",
+				"     format: 'cdm',",
+				"     manifestType: 'manifest',",
+				"     entityPath: 'terraform/datalake',",
+				"     manifestName: 'data_factory_dev',",
+				"     folderPath: '',",
+				"     fileSystem: 'state',",
+				"     columnNamesAsHeader: false,",
+				"     columnDelimiter: ',',",
+				"     quoteChar: '\\\"',",
+				"     escapeChar: '\\\\',",
+				"     corpusPath: '',",
+				"     corpusStore: 'adlsgen2',",
+				"     adlsgen2_fileSystem: 'state',",
+				"     truncate: false,",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true) ~> sink1"
 			]
