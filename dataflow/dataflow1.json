@@ -57,7 +57,7 @@
 				"     columnDelimiter: ',',",
 				"     quoteChar: '\\\"',",
 				"     escapeChar: '\\\\',",
-				"     corpusPath: '',",
+				"     corpusPath: 'corpusfolder',",
 				"     corpusStore: 'adlsgen2',",
 				"     adlsgen2_fileSystem: 'state',",
 				"     truncate: true,",
