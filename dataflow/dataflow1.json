@@ -26,7 +26,11 @@
 						"referenceName": "AzureDataLakeStorage1",
 						"type": "LinkedServiceReference"
 					},
-					"name": "sink1"
+					"name": "sink1",
+					"rejectedDataLinkedService": {
+						"referenceName": "AzureDataLakeStorage1",
+						"type": "LinkedServiceReference"
+					}
 				}
 			],
 			"transformations": [],
@@ -53,17 +57,18 @@
 				"     manifestType: 'manifest',",
 				"     entityPath: 'terraform/datalake',",
 				"     manifestName: 'data_factory_dev',",
+				"     partitionPath: 'state',",
 				"     folderPath: '',",
 				"     fileSystem: 'state',",
-				"     columnNamesAsHeader: false,",
+				"     columnNamesAsHeader: true,",
 				"     columnDelimiter: ',',",
 				"     quoteChar: '\\\"',",
 				"     escapeChar: '\\\\',",
 				"     corpusPath: '',",
 				"     corpusStore: 'adlsgen2',",
 				"     adlsgen2_fileSystem: 'state',",
-				"     truncate: false,",
-				"     umask: 0022,",
+				"     truncate: true,",
+				"     umask: 0777,",
 				"     preCommands: [],",
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
