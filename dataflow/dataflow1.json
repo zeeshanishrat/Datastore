@@ -24,7 +24,7 @@
 					},
 					"name": "sink1",
 					"rejectedDataLinkedService": {
-						"referenceName": "linkedService2",
+						"referenceName": "AzureDataLakeStorage1",
 						"type": "LinkedServiceReference"
 					}
 				}
