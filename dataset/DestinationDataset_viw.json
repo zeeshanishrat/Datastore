@@ -15,19 +15,11 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": {
-					"value": "@dataset().cw_fileName",
-					"type": "Expression"
-				},
-				"folderPath": {
-					"value": "@dataset().cw_fileName",
-					"type": "Expression"
-				},
+				"fileName": "data_factory_dev",
+				"folderPath": "terraform/datalake",
 				"fileSystem": "state"
 			},
 			"columnDelimiter": ",",
-			"compressionCodec": "ZipDeflate",
-			"compressionLevel": "Optimal",
 			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
