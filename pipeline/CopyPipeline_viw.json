@@ -1,51 +1,6 @@
 {
 	"name": "CopyPipeline_viw",
 	"properties": {
-		"activities": [
-			{
-				"name": "Synapse-Notebook1",
-				"description": "Pipeline action for Synapse workspace",
-				"type": "SynapseNotebook",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"notebook": {
-						"referenceName": {
-							"value": "@pipeline().parameters.cw_items",
-							"type": "Expression"
-						},
-						"type": "NotebookReference"
-					},
-					"snapshot": true,
-					"sparkPool": {
-						"referenceName": {
-							"value": "@pipeline().parameters.cw_items",
-							"type": "Expression"
-						},
-						"type": "BigDataPoolReference"
-					},
-					"executorSize": "Medium",
-					"conf": {
-						"spark.dynamicAllocation.enabled": true
-					},
-					"driverSize": {
-						"value": "@pipeline().parameters.cw_items",
-						"type": "Expression"
-					}
-				},
-				"linkedServiceName": {
-					"referenceName": "AzureSynapseArtifacts1",
-					"type": "LinkedServiceReference"
-				}
-			}
-		],
 		"parameters": {
 			"cw_items": {
 				"type": "Array",
