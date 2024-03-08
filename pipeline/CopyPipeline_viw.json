@@ -4,7 +4,7 @@
 		"activities": [
 			{
 				"name": "Synapse-Notebook1",
-				"description": "Piple",
+				"description": "Pipeline action for Synapse workspace",
 				"type": "SynapseNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -16,7 +16,18 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"notebook": {
+						"referenceName": {
+							"value": "@pipeline().parameters.cw_items",
+							"type": "Expression"
+						},
+						"type": "NotebookReference"
+					},
 					"snapshot": true
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureSynapseArtifacts1",
+					"type": "LinkedServiceReference"
 				}
 			}
 		],
