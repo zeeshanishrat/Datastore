@@ -3,9 +3,9 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Databricks Notebook1",
-				"description": "Databricks pipeline using Notebook",
-				"type": "DatabricksNotebook",
+				"name": "Synapse-Notebook1",
+				"description": "Piple",
+				"type": "SynapseNotebook",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -14,12 +14,9 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"linkedServiceName": {
-					"referenceName": "AzureDatabricks1",
-					"type": "LinkedServiceReference",
-					"parameters": {
-						"databrick": "1"
-					}
+				"userProperties": [],
+				"typeProperties": {
+					"snapshot": true
 				}
 			}
 		],
