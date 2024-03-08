@@ -23,7 +23,21 @@
 						},
 						"type": "NotebookReference"
 					},
-					"snapshot": true
+					"snapshot": true,
+					"sparkPool": {
+						"referenceName": {
+							"value": "@pipeline().parameters.cw_items",
+							"type": "Expression"
+						},
+						"type": "BigDataPoolReference"
+					},
+					"conf": {
+						"spark.dynamicAllocation.enabled": true
+					},
+					"driverSize": {
+						"value": "@pipeline().parameters.cw_items",
+						"type": "Expression"
+					}
 				},
 				"linkedServiceName": {
 					"referenceName": "AzureSynapseArtifacts1",
