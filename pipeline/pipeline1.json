@@ -182,7 +182,7 @@
 				]
 			},
 			{
-				"name": "Notebook1",
+				"name": "Databricks - Notebook1",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {
@@ -192,7 +192,14 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"databrick": "1"
+					}
+				}
 			}
 		],
 		"annotations": []
