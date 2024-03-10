@@ -1,0 +1,16 @@
+{
+	"name": "AzureDatabricksDeltaLake1onlyfortest",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDatabricksDeltaLake",
+		"typeProperties": {
+			"domain": "https://adb-3905031576788493.13.azuredatabricks.net",
+			"clusterId": "0310-022015-evn6hf64",
+			"workspaceResourceId": "/subscriptions/dfd20297-fe08-4392-ba07-a011f4b1acd7/resourceGroups/RG-AEU-ETT-DEV-MARKETING4/providers/Microsoft.Databricks/workspaces/datafctoryformarketing4"
+		},
+		"connectVia": {
+			"referenceName": "SAPBWIntigrationRunTime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
