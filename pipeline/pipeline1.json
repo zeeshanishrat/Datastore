@@ -3,14 +3,14 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "copydatafromsource",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
 					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
+					"secureOutput": true,
 					"secureInput": false
 				},
 				"userProperties": [
@@ -193,6 +193,9 @@
 					"secureInput": false
 				},
 				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/dbc0d3b4-1cbc-43ce-a529-ef27bb1961d8"
+				},
 				"linkedServiceName": {
 					"referenceName": "AzureDatabricks1",
 					"type": "LinkedServiceReference",
